@@ -44,7 +44,7 @@ for trends and patterns for time of sales.
 
 -- Creating a query to display the time of day for each record.
 SELECT
-	time,
+    time,
     CASE
 	WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
         WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
@@ -73,7 +73,7 @@ day of the week each branch is busiest.
 
 -- Running a query to get the days of the week and verify that works.
 SELECT
-	date,
+    date,
     DAYNAME(date) AS day_name
 FROM sales;
 
