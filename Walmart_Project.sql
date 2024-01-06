@@ -9,7 +9,7 @@ Instead of inserting the rows, I will be importing the dataset via CSV file.
 CREATE DATABASE IF NOT EXISTS SalesDataWalmart;
 
 CREATE TABLE IF NOT EXISTS sales(
-	invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
+    invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
     branch VARCHAR(5) NOT NULL,
     city VARCHAR(30) NOT NULL,
     customer_type VARCHAR(30) NOT NULL,
@@ -46,7 +46,7 @@ for trends and patterns for time of sales.
 SELECT
 	time,
     CASE
-		WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+	WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
         WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
         ELSE 'Evening'
 	END AS timezone
