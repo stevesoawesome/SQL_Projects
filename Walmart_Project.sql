@@ -44,11 +44,11 @@ for trends and patterns for time of sales.
 
 -- Creating a query to display the time of day for each record.
 SELECT
-    time,
-    CASE
-	WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
-        WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
-        ELSE 'Evening'
+	time,
+	CASE
+		WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+		WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+		ELSE 'Evening'
 	END AS timezone
 FROM sales;
 
